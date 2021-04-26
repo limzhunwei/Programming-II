@@ -3,8 +3,6 @@ package Exe_4_1;
 public class Main {
 
 	public static void main(String[] args) {
-
-		Fruit obj1 = new Fruit("Fruit", 2, 4.5, "everywhere");
 		
 		System.out.println("\n---------------APPLE---------------");
 		Apple obj2 = new Apple("Apple", 18, 2, "Jepun");
