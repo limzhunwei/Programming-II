@@ -8,7 +8,7 @@ public class Main {
 		
 		System.out.println("\n==================Apple==================");
 		Apple obj2 = new Apple("Apple", 3, 2.5);
-		System.out.println(obj2.toString());
+		System.out.println(obj2);
 		
 		System.out.println("\n================Red Apple================");
 		Red_Apple sub1 = new Red_Apple("Red Apple", 4, 3, 50);

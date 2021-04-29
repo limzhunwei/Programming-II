@@ -31,8 +31,14 @@ public class Orange extends Fruit{
 	}
 	
 	// overriding method
+	public String printColour() {
+		return "This orange is orange colour.";
+	}
+	
+	// overriding method
 	public String toString() {
-		return "Region: " + this.region
+		return printColour()
+				+ "\nRegion: " + this.region
 				+ "\nWeight: " + this.weight + "g"
 				+ "\nQuantity: " + this.quantity
 				+ "\nTotal calories (62cal per orange): " + countCal(this.quantity) + "cal"

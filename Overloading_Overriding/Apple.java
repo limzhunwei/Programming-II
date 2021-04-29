@@ -22,12 +22,18 @@ public class Apple extends Fruit{
 		return (q*p);
 	}
 
-	
+	// overriding method
+	public String printColour() {
+		return "This apple is either red or green colour.";
+		
+	}
 	// overriding method
 	public String toString() {
-		return "Quantity: " + this.quantity
+		return printColour()
+				+ "\nQuantity: " + this.quantity
 				+ "\nPrice per unit: RM" + totalPrice(this.price)
 				+ "\nTotal price: RM " + totalPrice(this.quantity,this.price);
+				
 				
 	}
 

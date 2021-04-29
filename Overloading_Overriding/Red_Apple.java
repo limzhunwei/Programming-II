@@ -10,7 +10,7 @@ public class Red_Apple extends Apple{
 
 	}
 	
-	//overriding method
+	// overloading method with 2 parameter
 	public double totalPrice(int q, double p){
 		return (q*p);
 	}
@@ -21,8 +21,14 @@ public class Red_Apple extends Apple{
 	}
 	
 	// overriding method
+	public String printColour() {
+		return "This apple is red colour.";
+	}
+	
+	// overriding method
 	public String toString() {
-		return "Quantity: " + quantity
+		return printColour()
+				+"\nQuantity: " + quantity
 				+ "\nPrice per unit: RM" + price
 				+ "\nTotal price: RM" + totalPrice(quantity,price)
 				+ "\nTotal price after dsicount: RM" + totalPrice(quantity,price,discount);

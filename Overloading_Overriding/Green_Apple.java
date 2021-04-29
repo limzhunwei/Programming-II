@@ -20,14 +20,20 @@ public class Green_Apple extends Apple{
 		return gred;
 	}
 	
-	// overriding method
+	// overloading method with 0 parameter
 	public double totalPrice(){
 		return quantity*price;
 	}
 	
 	// overriding method
+	public String printColour() {
+		return "This apple is green colour.";
+	}
+	
+	// overriding method
 	public String toString() {
-		return "Gred 1: " +  getGred()
+		return printColour()
+				+ "\nGred 1: " +  getGred()
 				+ "\nGred 2: " + getGred(gred)
 				+"\nQuantity: " + this.quantity
 				+ "\nPrice per unit: RM" + this.price

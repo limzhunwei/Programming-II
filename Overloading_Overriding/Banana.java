@@ -27,7 +27,6 @@ public class Banana extends Fruit{
 		return this.weight*10*vitC;
 	}
 	
-	
 	// overloading method with 2 parameter
 	public double totalPrice(double p, double w) {
 		return p*w;
@@ -39,8 +38,14 @@ public class Banana extends Fruit{
 	}
 	
 	// overriding method
+	public String printColour() {
+		return "This banana is yellow colour.";
+	}
+	
+	// overriding method
 	public String toString() {
-		return "Vitamin: " + this.vitamin
+		return printColour()
+				+ "\nVitamin: " + this.vitamin
 				+ "\nWight: " + this.weight + "kg"
 				+ "\nVitamin A per 100g: " + vitamin()  + "IU"
 				+ "\nVitamin C per 100g: " + vitamin(this.vitaminC)  + "mg"
