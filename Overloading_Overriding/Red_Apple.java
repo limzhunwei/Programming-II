@@ -2,32 +2,30 @@ package Overloading_Overriding;
 
 public class Red_Apple extends Apple{
 	
-	private String colour;
+	private double discount;
 	
-	public Red_Apple(String n, int q, double p, String c) {
+	public Red_Apple(String n, int q, double p,double d) {
 		super(n,q,p);
-		this.colour = c;
-		
+		this.discount =d;
+
 	}
 	
-	// overloading method with no parameter
-	public String getColour() {
-		return this.colour;
+	//overriding method
+	public double totalPrice(int q, double p){
+		return (q*p);
 	}
 	
-	// overloading method with 1 parameter
-	public String getColour(String colour) {
-		return colour;
-	}
-	
-	public double totalPrice(){
-		return this.quantity*this.price;
+	// overloading method with 3 parameter
+	public double totalPrice(int q, double p, double d) {
+		return q*p*(1-(d/100));
 	}
 	
 	// overriding method
 	public String toString() {
-		return "Quantity: " + this.quantity
-				+ "\nPrice per unit: RM" + this.price
-				+"\nTotal Price: RM" + totalPrice() ;
+		return "Quantity: " + quantity
+				+ "\nPrice per unit: RM" + price
+				+ "\nTotal price: RM" + totalPrice(quantity,price)
+				+ "\nTotal price after dsicount: RM" + totalPrice(quantity,price,discount);
+				
 	}
 }

@@ -9,17 +9,26 @@ public class Apple extends Fruit{
 		super(n);
 		this.quantity = q;
 		this.price = p;
+		
 	}
 	
-	public double totalPrice() {
-		return this.quantity*this.price;
+	// overloading with 1 parameter
+	public double totalPrice(double p) {
+		return  p;
 	}
+	
+	// overloading with 2 parameter
+	public double totalPrice(int q, double p) {
+		return (q*p);
+	}
+
 	
 	// overriding method
 	public String toString() {
 		return "Quantity: " + this.quantity
-				+ "\nPrice per unit: RM" + this.price
-				+"\nTotal Price: RM" + totalPrice() ;
+				+ "\nPrice per unit: RM" + totalPrice(this.price)
+				+ "\nTotal price: RM " + totalPrice(this.quantity,this.price);
+				
 	}
 
 }

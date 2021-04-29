@@ -7,12 +7,14 @@ public class Green_Apple extends Apple{
 	public Green_Apple(String n, int q, double p, char g) {
 		super(n,q,p);
 		this.gred = g;
+		getGred();
+		getGred(g);
 		
 	}
 	
 	// overloading method with no parameter
 	public char getGred() {
-		return this.gred;
+		return 'A';
 	}
 	
 	// overloading method with 1 parameter
@@ -20,13 +22,15 @@ public class Green_Apple extends Apple{
 		return gred;
 	}
 	
+	// overriding method
 	public double totalPrice(){
-		return this.quantity*this.price;
+		return quantity*price;
 	}
 	
 	// overriding method
 	public String toString() {
-		return "Gred 2: " + this.gred
+		return "Gred 1: " +  getGred()
+				+ "\nGred 2: " + getGred(gred)
 				+"\nQuantity: " + this.quantity
 				+ "\nPrice per unit: RM" + this.price
 				+"\nTotal Price: RM" + totalPrice() ;
