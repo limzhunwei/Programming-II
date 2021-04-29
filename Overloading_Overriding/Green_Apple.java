@@ -7,8 +7,6 @@ public class Green_Apple extends Apple{
 	public Green_Apple(String n, int q, double p, char g) {
 		super(n,q,p);
 		this.gred = g;
-		getGred();
-		getGred(g);
 		
 	}
 	
