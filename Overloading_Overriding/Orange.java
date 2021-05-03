@@ -2,32 +2,47 @@ package Overloading_Overriding;
 
 public class Orange extends Fruit{
 	
-	private String region;
-	private double price;
-	private double weight;
-	private int quantity;
+	private char size;
+	private double calories;
+	private double cal;
 	
-	public Orange(String n, String r, double p, double w, int q) {
+	public Orange(String n, char s,double c) {
 		super(n);
-		this.region = r;
-		this.price = p;
-		this.weight = w;
-		this.quantity = q;
+		this.size = s;
+		this.calories = c;
+		
+		switch(size) {
+		case 'S':
+			calories();
+			System.out.println("Size of orange: " + this.size);
+			System.out.println("Calories of the orange: " + calories() + "mg");
+			break;
+			
+		case 'M':
+			cal = 52.4;
+			calories(cal);
+			System.out.println("Size of orange: " + this.size);
+			System.out.println("Calories of the orange: " + calories(cal) + "mg");
+			break;
+			
+		case 'L':
+			cal = 73.6;
+			calories(cal);
+			System.out.println("Size of orange: " + this.size);
+			System.out.println("Calories of the orange: " + calories(cal) + "mg");
+			break;
+		}
+	}
+
+	
+	//overloading method with 0 parameter
+	public double calories() {
+		return this.calories;
 	}
 	
 	//overloading method with 1 parameter
-	public double countCal(int q) {
-		return q*62;
-	}
-	
-	//overloading method with no parameter
-	public double countCal() {
-		return (this.weight/100)*47;
-	}
-	
-	// overloading method with 1 parameter
-	public double totalPrice(int q) {
-		return q*this.price;
+	public double calories(double cal) {
+		return cal;
 	}
 	
 	// overriding method
@@ -37,14 +52,7 @@ public class Orange extends Fruit{
 	
 	// overriding method
 	public String toString() {
-		return printColour()
-				+ "\nRegion: " + this.region
-				+ "\nWeight: " + this.weight + "g"
-				+ "\nQuantity: " + this.quantity
-				+ "\nTotal calories (62cal per orange): " + countCal(this.quantity) + "cal"
-				+ "\nTotal calories (47cal per 100g): " + countCal() + "cal"
-				+ "\nPrice per orange: RM" + this.price
-				+ "\nTotal price: RM" + totalPrice(this.quantity);
+		return printColour();
 	}
 
 }
