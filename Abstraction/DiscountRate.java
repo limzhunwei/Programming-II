@@ -1,6 +1,6 @@
 package Abstraction;
 
-public interface DiscountRate {
+interface DiscountRate {
 	
 	/* interface class only have abstract method
 	 	all method in interface class must public*/
