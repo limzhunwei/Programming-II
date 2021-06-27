@@ -1,6 +1,0 @@
-Event 1  Lim Zhun Wei  21  012-3456789  abc_123@gmail.com  KL Selangor  1000  50.00  
-________
-Event 2  Ali  22  014-56789321  ali@gmail.com  Sintok Kedah  3500  350.00  
-________
-Event 3  Muthu  23  018-876543219  muthu@gmail.com  Sintok Kedah  50  -  
-________
