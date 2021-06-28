@@ -90,11 +90,24 @@ public class Finance extends JFrame {
 			panel.add(panel_1);
 			
 			JLabel lblNewLabel = new JLabel("UN WOMEN FINANCE REPORT");
-			lblNewLabel.setBackground(new Color(153, 204, 255));
+			lblNewLabel.setBackground(new Color(51, 204, 255));
 			lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel.setFont(new Font("Segoe Script", Font.PLAIN, 40));
 			lblNewLabel.setBounds(10, 10, 945, 61);
 			panel_1.add(lblNewLabel);
+			
+			JButton btnBack = new JButton("BACK");
+			btnBack.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					Sales s = new Sales();
+					s.setModalExclusionType(null);
+					s.setVisible(true);
+				}
+			});
+			btnBack.setFont(new Font("Bernard MT Condensed", Font.PLAIN, 10));
+			btnBack.setBackground(new Color(51, 204, 255));
+			btnBack.setBounds(10, 10, 69, 26);
+			panel_1.add(btnBack);
 			
 			JPanel panel_1_1 = new JPanel();
 			panel_1_1.setLayout(null);
