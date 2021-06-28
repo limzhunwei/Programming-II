@@ -171,6 +171,7 @@ public class Finance extends JFrame {
 			panel_1_1.add(eventComboBox);
 			
 			txtIncome = new JTextField();
+			txtIncome.setEditable(false);
 			txtIncome.setFont(new Font("Segoe Print", Font.PLAIN, 14));
 			txtIncome.setColumns(10);
 			txtIncome.setBounds(205, 139, 152, 33);
@@ -183,6 +184,7 @@ public class Finance extends JFrame {
 			panel_1_1.add(txtTotalSponsor);
 			
 			txtTotalExpenses = new JTextField();
+			txtTotalExpenses.setEditable(false);
 			txtTotalExpenses.setFont(new Font("Segoe Print", Font.PLAIN, 14));
 			txtTotalExpenses.setColumns(10);
 			txtTotalExpenses.setBounds(205, 96, 152, 33);
@@ -357,7 +359,7 @@ public class Finance extends JFrame {
 			btnReset.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					monthComboBox.setSelectedItem("~ Select Month ~");
-					eventComboBox.setSelectedItem("~ Select Amount ~");
+					eventComboBox.setSelectedItem("~ Select Event ~");
 					txtIncome.setText("");
 					txtTotalSponsor.setText("");
 					txtTotalExpenses.setText("");
